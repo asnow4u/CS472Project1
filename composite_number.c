@@ -1,4 +1,4 @@
-#include <iostream>
+#include <stdio.h>
 
 /*
       Short program to determine whether a provided positive number is composite.
@@ -10,8 +10,23 @@ int main() {
       int num = 94;
       int is_composite;
 
-      for(int i=0; i<9; i++){
-        std::cout << num%i << std::endl;
+      //Keep track of perfect divisions (0 as the remainder)
+      int countDiv;
+
+      //Loop through 2-9 (key values are 2, 3, 5, and 7)
+      for (int i=2; i<10; i++){
+         
+         //Count perfect divisions
+         if (num%i == 0 && num != i){
+            countDiv++;
+         }
+      }
+     
+      //Set is composite based on number of perfect divisions
+      if (countDiv > 0){
+        is_composite = 1;
+      } else {
+        is_composite = 0;
       }
 
 
