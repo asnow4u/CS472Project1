@@ -1,4 +1,3 @@
-#include <stdio.h>
 
 /*
       Short program to determine whether a provided positive number is composite.
